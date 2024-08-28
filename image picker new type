@@ -1,0 +1,28 @@
+val i = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+                      startActivityForResult(i, 100)
+(18:23:01)    
+                      println("onActivityResult onActivityResult")
+//                       //Image Uri will not be null for RESULT_OK
+                      val fileUri = data?.data
+                      println("file data ${data!!}")
+                      println("file data fileUri   ${fileUri!!.path}")
+                      println("file data --${data?.data}")
+                      val contentResolver = context?.contentResolver
+
+                      val selectedImage = data.data
+                      val filePathColumn = arrayOf(MediaStore.Images.Media.DATA)
+                      val cursor: Cursor? = contentResolver!!.query(
+                              selectedImage!!,
+                              filePathColumn, null, null, null
+                      )
+                      cursor!!.moveToFirst()
+                      val columnIndex = cursor.getColumnIndex(filePathColumn[0])
+                      val picturePath = cursor.getString(columnIndex)
+
+                      cursor.close()
+                      
+//                       /storage/emulated/0/DCIM/Camera/IMG_20231009_105706649.jpg
+
+                      //return Image Path to the Main Activity
+                      val returnFromGalleryIntent = Intent()
+                      returnFromGalleryIntent.putExtra("picturePath", picturePath)

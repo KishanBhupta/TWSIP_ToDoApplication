@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".my_activities.MainActivity">
+
+    <Toolbar
+        android:id="@+id/m_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/to_do_app"
+            android:textColor="@color/white"
+            android:textSize="21sp" />
+    </Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/m_recv_category"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@id/m_toolbar"
+        tools:listitem="@layout/my_category_list_item"/>
+
+    <TextView
+        android:id="@+id/lb_my_task"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:text="@string/my_task"
+        android:textSize="13sp"
+        android:textColor="@color/red"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingStart="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/m_recv_category"
+        tools:ignore="RtlSymmetry" />
+
+
+    <Spinner
+        android:id="@+id/sortBy"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textSize="13sp"
+        style="@style/Widget.AppCompat.DropDownItem.Spinner"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/m_recv_category"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/m_recv_my_task"
+        android:layout_below="@id/lb_my_task"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/my_task_card"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/m_addTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Material3.FloatingActionButton.Primary"
+        android:backgroundTint="@color/red"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        app:tint="@android:color/white"
+        android:src="@drawable/baseline_add_white_24"/>
+
+
+</RelativeLayout>

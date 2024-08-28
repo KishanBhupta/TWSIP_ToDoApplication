@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">To Do App</string>
+    <string name="to_do_app">To Do App</string>
+    <string name="be_tension_free_of_remembering_tasks">Be Tension Free Of Remembering Tasks.</string>
+    <string name="category">Category</string>
+    <string name="my_task">My Task</string>
+    <string name="sort_by_date">Sort By Date</string>
+    <string name="task_title">Task Title</string>
+    <string name="task_des">Task Description</string>
+    <string name="priority">Priority</string>
+    <string name="task_date">Date</string>
+    <string name="task_time">Time</string>
+    <string name="add_category">+ Add Category</string>
+    <string name="remind_me">Remind Me</string>
+    <string name="add_task">Add Task</string>
+    <string name="update_task">Update Task</string>
+    <string name="add_new_task">Add New Task</string>
+    <string name="category_name">Category Name</string>
+    <string name="add_category1">Add Category</string>
+</resources>

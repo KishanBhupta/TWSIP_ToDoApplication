@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mcl_categoryCard"
+    android:orientation="vertical"
+    android:layout_width="100dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="0dp"
+    android:layout_margin="5dp"
+    android:backgroundTint="@color/red50"
+    android:layout_height="wrap_content">
+
+<TextView
+    android:id="@+id/mcl_categoryName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:textSize="14sp"
+    android:textColor="@color/black"
+    android:fontFamily="@font/poppins_medium"
+    android:padding="10dp"
+    android:text="@string/category"/>
+
+
+</androidx.cardview.widget.CardView>

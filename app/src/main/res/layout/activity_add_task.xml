@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".my_activities.AddTaskActivity">
+
+    <Toolbar
+        android:id="@+id/at_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red">
+
+        <ImageButton
+            android:id="@+id/at_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:src="@drawable/baseline_arrow_back_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingStart="10dp"
+            android:text="@string/to_do_app"
+            android:textColor="@color/white"
+            android:textSize="21sp" />
+    </Toolbar>
+
+    <TextView
+        android:id="@+id/at_lb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/at_toolbar"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/add_new_task"
+        android:textColor="@color/red" />
+
+
+    <EditText
+        android:id="@+id/at_ed_taskTitle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/at_lb"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/my_priority_background_red50"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center_vertical"
+        android:hint="@string/task_title"
+        android:importantForAutofill="no"
+        android:inputType="textAutoComplete|textAutoCorrect|text"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="5dp"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/at_ed_taskDes"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/at_ed_taskTitle"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/my_priority_background_red50"
+        android:fontFamily="@font/poppins_medium"
+        android:hint="@string/task_des"
+        android:importantForAutofill="no"
+        android:inputType="textAutoComplete|textAutoCorrect|text"
+        android:maxLines="5"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="5dp"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/timeAndDateBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/at_ed_taskDes">
+
+        <EditText
+            android:id="@+id/at_ed_taskDate"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_weight="1"
+            android:background="@drawable/my_priority_background_red50"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:drawableEnd="@drawable/baseline_edit_calendar_24"
+            android:drawableTint="@color/red70"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center_vertical"
+            android:hint="@string/task_date"
+            android:importantForAutofill="no"
+            android:inputType="date"
+            android:maxLines="5"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="5dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/at_ed_taskTime"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_weight="1"
+            android:background="@drawable/my_priority_background_red50"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:drawableEnd="@drawable/baseline_access_time_24"
+            android:drawableTint="@color/red70"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center_vertical"
+            android:hint="@string/task_time"
+            android:importantForAutofill="no"
+            android:inputType="date"
+            android:maxLines="5"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="5dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+    <Spinner
+        android:id="@+id/at_sp_taskCategory"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/timeAndDateBar"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/my_priority_background_red50"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="5dp"
+        android:spinnerMode="dialog" />
+
+    <Button
+        android:id="@+id/at_btn_addCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/at_sp_taskCategory"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/add_category"
+        app:cornerRadius="15dp" />
+
+    <Spinner
+        android:id="@+id/at_sp_taskRemSelector"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/at_btn_addCategory"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/my_priority_background_red50"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="5dp"
+        android:spinnerMode="dialog" />
+
+    <CheckBox
+        android:id="@+id/at_ch_remindMe"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@id/at_sp_taskRemSelector"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center_vertical"
+        android:text="@string/remind_me"
+        android:textSize="13sp"
+        app:buttonTint="@color/red" />
+
+    <RadioGroup
+        android:id="@+id/at_p_radio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/at_ch_remindMe"
+        android:layout_marginHorizontal="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/at_rd_high"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="High"
+            android:textStyle="bold"
+            app:buttonTint="@color/red" />
+
+        <RadioButton
+            android:id="@+id/at_rd_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Meduim"
+            android:textStyle="bold"
+            app:buttonTint="@color/yellow" />
+
+        <RadioButton
+            android:id="@+id/at_rd_normal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="normal"
+            android:textStyle="bold"
+            app:buttonTint="@color/blue" />
+
+        <RadioButton
+            android:id="@+id/at_rd_Regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Regular"
+            android:textStyle="bold"
+            app:buttonTint="@color/green" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/at_btn_addTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/at_p_radio"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingVertical="10dp"
+        android:text="@string/add_task"
+        app:cornerRadius="15dp" />
+
+
+</RelativeLayout>

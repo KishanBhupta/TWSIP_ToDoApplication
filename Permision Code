@@ -1,0 +1,41 @@
+        if (ActivityCompat.checkSelfPermission(
+                this,
+                Manifest.permission.READ_MEDIA_IMAGES
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(
+                    this@MainActivity,
+                    Manifest.permission.READ_MEDIA_IMAGES
+                )
+            ) {
+                val alertDialog = AlertDialog.Builder(this@MainActivity)
+                    .setTitle("Permission Required")
+                    .setMessage("Notification Permission is required in order to get notification of your tasks.")
+                    .setPositiveButton(
+                        "Allow"
+                    ) { dialog, which ->
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                            ActivityCompat.requestPermissions(
+                                this@MainActivity,
+                                arrayOf(Manifest.permission.READ_MEDIA_IMAGES,Manifest.permission.POST_NOTIFICATIONS,Manifest.permission.USE_EXACT_ALARM),
+                                200
+                            )
+                        }
+                    }
+                    .setNegativeButton(
+                        "Deny"
+                    ) { dialog, which -> dialog!!.dismiss() }
+                    .create()
+
+                alertDialog.show()
+            } else {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                    ActivityCompat.requestPermissions(
+                        this@MainActivity,
+                        arrayOf(Manifest.permission.READ_MEDIA_IMAGES,Manifest.permission.POST_NOTIFICATIONS,Manifest.permission.USE_EXACT_ALARM),
+                        200
+                    )
+                }
+            }
+        }
+    }

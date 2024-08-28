@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/sp_animation"
+        android:layout_width="match_parent"
+        app:lottie_rawRes="@raw/loding_animation"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_height="600dp" />
+
+    <TextView
+        android:id="@+id/sp_app_name"
+        android:layout_width="match_parent"
+        android:layout_below="@id/sp_animation"
+        android:gravity="center"
+        android:layout_marginTop="13dp"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:textSize="29dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/red"
+        android:text="@string/to_do_app"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginTop="13dp"
+        android:layout_below="@id/sp_app_name"
+        android:text="@string/be_tension_free_of_remembering_tasks"/>
+
+</RelativeLayout>
