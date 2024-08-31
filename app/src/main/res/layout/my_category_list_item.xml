@@ -7,7 +7,7 @@
     app:cardCornerRadius="15dp"
     app:cardElevation="0dp"
     android:layout_margin="5dp"
-    android:backgroundTint="@color/red50"
+    android:backgroundTint="@color/cream"
     android:layout_height="wrap_content">
 
 <TextView

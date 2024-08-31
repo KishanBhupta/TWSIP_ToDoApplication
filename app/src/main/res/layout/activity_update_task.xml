@@ -84,7 +84,7 @@
             android:clickable="false"
             android:cursorVisible="false"
             android:drawableEnd="@drawable/baseline_edit_calendar_24"
-            android:drawableTint="@color/red50"
+            android:drawableTint="@color/cream"
             android:focusable="false"
             android:focusableInTouchMode="false"
             android:fontFamily="@font/poppins_medium"

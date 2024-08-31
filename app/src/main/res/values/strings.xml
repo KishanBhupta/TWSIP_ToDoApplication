@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">To Do App</string>
-    <string name="to_do_app">To Do App</string>
-    <string name="be_tension_free_of_remembering_tasks">Be Tension Free Of Remembering Tasks.</string>
+    <string name="app_name">Task App</string>
+    <string name="to_do_app">Task App</string>
+    <string name="be_stress_free_when_recalling_task">Be Stress-Free When Recalling Tasks.</string>
     <string name="category">Category</string>
     <string name="my_task">My Task</string>
     <string name="sort_by_date">Sort By Date</string>

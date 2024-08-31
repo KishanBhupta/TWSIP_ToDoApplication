@@ -9,7 +9,7 @@
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/sp_animation"
         android:layout_width="match_parent"
-        app:lottie_rawRes="@raw/loding_animation"
+        app:lottie_rawRes="@raw/splash"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         android:layout_height="600dp" />
@@ -37,6 +37,6 @@
         android:fontFamily="@font/poppins_medium"
         android:layout_marginTop="13dp"
         android:layout_below="@id/sp_app_name"
-        android:text="@string/be_tension_free_of_remembering_tasks"/>
+        android:text="@string/be_stress_free_when_recalling_task"/>
 
 </RelativeLayout>

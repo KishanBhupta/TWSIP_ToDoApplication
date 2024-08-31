@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".my_activities.AddTaskActivity">
-
     <Toolbar
         android:id="@+id/at_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/red">
+
 
         <ImageButton
             android:id="@+id/at_btn_back"
@@ -20,11 +20,13 @@
             android:src="@drawable/baseline_arrow_back_24" />
 
         <TextView
+            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_bold"
             android:paddingStart="10dp"
             android:text="@string/to_do_app"
+            android:gravity="center"
             android:textColor="@color/white"
             android:textSize="21sp" />
     </Toolbar>
@@ -110,6 +112,7 @@
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_marginHorizontal="10dp"
+
             android:layout_marginTop="13dp"
             android:layout_weight="1"
             android:background="@drawable/my_priority_background_red50"
@@ -123,7 +126,8 @@
             android:gravity="center_vertical"
             android:hint="@string/task_time"
             android:importantForAutofill="no"
-            android:inputType="date"
+            android:inputType="datetime"
+
             android:maxLines="5"
             android:paddingHorizontal="20dp"
             android:paddingVertical="5dp"
@@ -172,7 +176,7 @@
         android:layout_height="25dp"
         android:layout_below="@id/at_sp_taskRemSelector"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="15sp"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center_vertical"
         android:text="@string/remind_me"
@@ -185,6 +189,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/at_ch_remindMe"
         android:layout_marginHorizontal="10dp"
+        android:paddingTop="12sp"
         android:orientation="horizontal">
 
         <RadioButton
@@ -193,6 +198,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="High"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:buttonTint="@color/red" />
 
@@ -202,6 +208,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Meduim"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:buttonTint="@color/yellow" />
 
@@ -210,7 +217,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="normal"
+            android:text="Normal"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:buttonTint="@color/blue" />
 
@@ -220,6 +228,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Regular"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:buttonTint="@color/green" />
     </RadioGroup>

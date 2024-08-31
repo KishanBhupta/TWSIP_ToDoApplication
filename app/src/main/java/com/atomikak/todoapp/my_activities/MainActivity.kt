@@ -12,8 +12,6 @@ import android.widget.AdapterView
 import android.widget.AdapterView.OnItemSelectedListener
 import android.widget.ArrayAdapter
 import android.widget.Spinner
-import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -213,11 +211,20 @@ class MainActivity : AppCompatActivity() {
                 val alertDialog = AlertDialog.Builder(this@MainActivity)
                     .setTitle("Permission Required")
                     .setMessage("Notification Permission is required in order to get notification of your tasks.")
-                    .setPositiveButton("Allow"
-                    ) { dialog, which ->
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+//                    .setPositiveButton("Allow"
+//                    ) { dialog, which ->
+//                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+//                            ActivityCompat.requestPermissions(
+//                                this@MainActivity,
+//                                arrayOf(Manifest.permission.POST_NOTIFICATIONS),
+//                                200
+//                            )
+//                        }
+//                    }
+                    .setPositiveButton("Allow"){ dialogInterface: DialogInterface, i: Int ->
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU){
                             ActivityCompat.requestPermissions(
-                                this@MainActivity,
+                                this,
                                 arrayOf(Manifest.permission.POST_NOTIFICATIONS),
                                 200
                             )

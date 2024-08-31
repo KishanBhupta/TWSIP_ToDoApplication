@@ -34,14 +34,14 @@
                 android:fontFamily="@font/poppins_bold"
                 android:text="@string/task_title"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tc_lb_taskDes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:fontFamily="@font/poppins_bold"
+                android:fontFamily="@font/poppins_medium"
                 android:text="@string/task_des"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
@@ -52,7 +52,7 @@
                 android:textColor="@color/black"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:fontFamily="@font/poppins_bold"
+                android:fontFamily="@font/poppins_medium"
                 android:text="@string/task_des"
                 android:textSize="14sp" />
 
@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:layout_marginTop="6dp"
-                android:fontFamily="@font/poppins_bold"
+                android:fontFamily="@font/poppins_medium"
                 android:text="@string/task_des"
                 android:textSize="12sp" />
 
@@ -90,7 +90,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:background="@color/transparent"
-            app:drawableStartCompat="@drawable/baseline_edit_note_24" />
+            app:drawableStartCompat="@drawable/baseline_edit_24" />
 
 
     </RelativeLayout>

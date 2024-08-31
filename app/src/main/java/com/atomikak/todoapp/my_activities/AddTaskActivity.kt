@@ -270,6 +270,8 @@ class AddTaskActivity : AppCompatActivity() {
         goToHome()
     }
 
+    // get all category
+
     private fun getCategory() {
         categoryList = Category(sqliteHelper).getCategory()
         at_sp_taskCategory.adapter = ArrayAdapter(

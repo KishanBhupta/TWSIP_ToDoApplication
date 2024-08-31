@@ -81,13 +81,13 @@ class TaskAdapter(val context: Context, val taskList: ArrayList<Task>) :
                 holder.task_card.setCardBackgroundColor(
                     ContextCompat.getColor(
                         context,
-                        R.color.red50
+                        R.color.cream
                     )
                 )
                 holder.lb_tc_priority.setBackgroundResource(R.drawable.my_priority_background_red)
                 holder.lb_tc_priority.setTextColor(ContextCompat.getColor(context, R.color.red))
-                holder.tc_edit.setTextColor(ContextCompat.getColor(context, R.color.red50))
-                holder.tc_ch_complete.buttonTintList = ColorStateList.valueOf(R.color.red50)
+                holder.tc_edit.setTextColor(ContextCompat.getColor(context, R.color.cream))
+                holder.tc_ch_complete.buttonTintList = ColorStateList.valueOf(R.color.cream)
             }
         }
         holder.tc_lb_taskTitle.text = taskList[position].t_title.toString()
